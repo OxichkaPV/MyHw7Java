@@ -5,56 +5,56 @@ import org.junit.jupiter.api.Test;
 
 public class StatServiceTest {
     @Test
-    void AmountSalesIsEqual() {
+    void amountSalesIsEqual() {
         StatService service = new StatService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 180;
-        long actualSum = service.GetSumSales(sales);
+        long actualSum = service.getSumSales(sales);
         Assertions.assertEquals(expectedSum, actualSum);
     }
 
     @Test
-    void AverageAmountSalesIsEquals() {
+    void averageAmountSalesIsEquals() {
         StatService service = new StatService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 15;
-        long actualSum = service.GetAverageSumSales(sales);
+        long actualSum = service.getAverageSumSales(sales);
         Assertions.assertEquals(expectedSum, actualSum);
     }
 
     @Test
-    void FindMonthMaxAmountSales() {
+    void findMonthMaxAmountSales() {
         StatService service = new StatService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 8;
-        int actualMonth = service.GetMaxAmountMonthSales(sales);
+        int actualMonth = service.getMaxAmountMonthSales(sales);
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
 
     @Test
-    void FindMonthMinAmountSales() {
+    void findMonthMinAmountSales() {
         StatService service = new StatService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 9;
-        int actualMonth = service.GetMinAmountMonthSales(sales);
+        int actualMonth = service.getMinAmountMonthSales(sales);
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
 
     @Test
-    void FindCountMonthBelowAverage() {
+    void findCountMonthBelowAverage() {
         StatService service = new StatService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedCount = 5;
-        int actualCount = service.GetCountMonthBelowAverage(sales);
+        int actualCount = service.getCountMonthBelowAverage(sales);
         Assertions.assertEquals(expectedCount, actualCount);
     }
 
     @Test
-    void FindCountMonthAboveAverage() {
+    void findCountMonthAboveAverage() {
         StatService service = new StatService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedCount = 5;
-        int actualCount = service.GetCountMonthAboveAverage(sales);
+        int actualCount = service.getCountMonthAboveAverage(sales);
         Assertions.assertEquals(expectedCount, actualCount);
     }
 }
